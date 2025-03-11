@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
+    <title>Stadspark Restaurant</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x50" alt="Restaurant Logo">
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -18,40 +21,53 @@
         </nav>
     </header>
     <section id="home">
-        <h1>Welcome to Our Restaurant</h1>
-        <p>Experience the best dining in town.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Restaurant Image">
+        <div class="hero">
+            <h1>Welcome to Stadspark Restaurant</h1>
+            <p>Experience the best dining in town.</p>
+            <a href="#menu" class="scroll-btn">Scroll Down</a>
+        </div>
     </section>
     <section id="menu">
         <h2>Our Menu</h2>
-        <div class="menu-item">
-            <h3>Dish Name</h3>
-            <p>Description of the dish.</p>
-            <p>Price: €XX.XX</p>
-            <img src="https://via.placeholder.com/400x300" alt="Dish Image">
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/400x300" alt="Dish Image">
+                <h3>Dish Name</h3>
+                <p>Description of the dish.</p>
+                <p>Price: €XX.XX</p>
+            </div>
+            <!-- Add more menu items as needed -->
         </div>
-        <!-- Add more menu items as needed -->
     </section>
     <section id="about">
         <h2>About Us</h2>
-        <p>Learn more about our story and what makes us special.</p>
-        <img src="https://via.placeholder.com/600x400" alt="About Us Image">
+        <div class="about-content">
+            <img src="https://via.placeholder.com/600x400" alt="About Us Image">
+            <p>Learn more about our story and what makes us special.</p>
+        </div>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Get in touch with us for reservations or inquiries.</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <div class="contact-form">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
     <footer>
-        <p>&copy; 2025 Restaurant Name. All rights reserved.</p>
+        <p>&copy; 2025 Stadspark Restaurant. All rights reserved.</p>
     </footer>
+    <script>
+        document.querySelector('.scroll-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#menu').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
