@@ -31,10 +31,9 @@ section {
 }
 
 #home {
-    background: url('restaurant.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-   : 100vh;
+    background-color: #f4f4f4;
+    color: black;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
